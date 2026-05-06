@@ -1,0 +1,73 @@
+{
+  "repo": "atlas-sim-queue-flow",
+  "language": "C#",
+  "category": "Simulations",
+  "goal": "Create a C# reference implementation for queue workflows, centered on policy evaluation, deny and allow fixtures, and explainable decision traces.",
+  "review_model": {
+    "terms": [
+      "input pressure",
+      "state drift",
+      "review cost",
+      "decision risk"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "input pressure",
+      "signal": 76,
+      "slack": 48,
+      "drag": 30,
+      "confidence": 53,
+      "score": 163,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "state drift",
+      "signal": 52,
+      "slack": 39,
+      "drag": 25,
+      "confidence": 72,
+      "score": 140,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "review cost",
+      "signal": 47,
+      "slack": 40,
+      "drag": 14,
+      "confidence": 76,
+      "score": 168,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "decision risk",
+      "signal": 54,
+      "slack": 25,
+      "drag": 13,
+      "confidence": 90,
+      "score": 184,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "input pressure",
+      "signal": 57,
+      "slack": 22,
+      "drag": 16,
+      "confidence": 56,
+      "score": 144,
+      "lane": "ship"
+    }
+  ]
+}
