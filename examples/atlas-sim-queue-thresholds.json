@@ -1,0 +1,17 @@
+{
+  "repo": "atlas-sim-queue-flow",
+  "thresholds": {
+    "signal": 3,
+    "slack": 2,
+    "confidence": 1,
+    "drag": 3,
+    "ship": 207,
+    "watch": 109
+  },
+  "terms": [
+    "input pressure",
+    "state drift",
+    "review cost",
+    "decision risk"
+  ]
+}
